@@ -1,0 +1,11 @@
+service: my-bot
+
+
+provider:
+  name: aws
+  region: ${opt:region, 'us-west-2'} #Overwrite the default region used.
+  runtime: nodejs12.x
+
+functions:
+  getWeather:
+    handler: handler.getWeather
